@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess Using Javascript</title>
+    <title>Chess Using JavaScript</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Simple Chess Using Javascript</h1>
-    <div id="gameboard" ></div>
+    <h1>Simple Chess Using JavaScript</h1>
+
+    <!-- Game Mode Selection -->
+    <h2>Select Game Mode</h2>
+    <select id="game-mode">
+        <option value="traditional">Traditional Chess</option>
+        <option value="chess960">Chess960</option>
+    </select>
+    <button id="start-game">Start Game</button>
+
+    <!-- Chess Board -->
+    <div id="gameboard"></div>
+
+    <!-- Info Bars -->
     <div class="bars">
-        <p class="turnbar">It Is <span id="player"></span>'s Turn.</p>
+        <p class="turnbar">It is <span id="player">black</span>'s turn.</p>
         <p class="infobar" id="info-display"></p>
         <p class="errbar" id="err"></p>
     </div>
